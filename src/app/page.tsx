@@ -13,7 +13,7 @@ export type UploadResult = {
 };
 
 export default function Home() {
-  const [imgId, setImgId] = useState("");
+  const [imgId, setImgId] = useState("nndmr2vokujlq1mwv0i0");
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <CldUploadButton
