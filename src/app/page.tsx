@@ -2,7 +2,6 @@
 
 import { CldUploadButton } from "next-cloudinary";
 import { CldImage } from "next-cloudinary";
-import { CldUploadWidget } from "next-cloudinary";
 import { useState } from "react";
 
 export type UploadResult = {
@@ -13,7 +12,7 @@ export type UploadResult = {
 };
 
 export default function Home() {
-  const [imgId, setImgId] = useState("nndmr2vokujlq1mwv0i0");
+  const [imgId, setImgId] = useState("");
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <CldUploadButton
@@ -22,7 +21,6 @@ export default function Home() {
         }}
         uploadPreset="enpss8rt"
       />
-      {/* 15:50 */}
       {imgId && (
         <CldImage
           width="400"
