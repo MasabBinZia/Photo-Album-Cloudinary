@@ -12,7 +12,6 @@ const UploadButton = () => {
         onUpload={(result: any) => {
           //   setImgId(result.info.public_id);
           setTimeout(() => {
-            console.log("refresh");
             router.refresh();
           }, 1000);
         }}
