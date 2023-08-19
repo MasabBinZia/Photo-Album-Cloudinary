@@ -1,7 +1,7 @@
 import cloudinary from "cloudinary";
 import { CloudinaryImage } from "../gallery/CloudinaryImage";
 import { SearchResults } from "../gallery/page";
-
+import FavoritesList from "./favoritesList";
 
 export default async function Favoritespage() {
   const results = (await cloudinary.v2.search
@@ -17,17 +17,7 @@ export default async function Favoritespage() {
         <div className="flex justify-between">
           <h1 className="text-4xl font-bold">Favorite Images</h1>
         </div>
-        <div className="grid grid-cols-4 gap-4">
-          {results.resources.map((result) => (
-            <CloudinaryImage
-              key={result.public_id}
-              imgdata={result}
-              width="400"
-              height="300"
-              alt="an img of something"
-            />
-          ))}
-        </div>
+        <FavoritesList initialResources={results.resources} />
       </div>
     </section>
   );
