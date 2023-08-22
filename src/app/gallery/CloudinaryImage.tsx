@@ -1,5 +1,5 @@
 "use client";
-import { Heart } from "@/components/icons/Heart";
+import { Heart } from 'lucide-react';
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { useState, useTransition } from "react";
 import { SearchResults } from "./page";

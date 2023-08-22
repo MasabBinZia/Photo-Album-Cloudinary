@@ -15,7 +15,7 @@ const ImgGrid = ({
   }
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4 md:grid-cols-4 md:gap-4">
       {[getColums(0), getColums(1), getColums(2), getColums(3)].map(
         (column, idx) => (
           <div key={idx} className="flex flex-col gap-4">
