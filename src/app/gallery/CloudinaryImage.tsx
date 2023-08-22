@@ -1,5 +1,5 @@
 "use client";
-import { Heart } from 'lucide-react';
+import { Heart } from "lucide-react";
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { useState, useTransition } from "react";
 import { SearchResults } from "./page";
@@ -10,7 +10,6 @@ export function CloudinaryImage(
   props: {
     imgdata: SearchResults;
     onUnheart?: (unheartedResource: SearchResults) => void;
-    [key: string]: any;
   } & Omit<CldImageProps, "src">
 ) {
   const [transition, startTransition] = useTransition();

@@ -9,11 +9,10 @@ const UploadButton = () => {
   return (
     <Button asChild>
       <CldUploadButton
-        onUpload={(result: any) => {
-          //   setImgId(result.info.public_id);
+        onUpload={() => {
           setTimeout(() => {
             router.refresh();
-          }, 1000);
+          }, 2000);
         }}
         uploadPreset="enpss8rt"
       >

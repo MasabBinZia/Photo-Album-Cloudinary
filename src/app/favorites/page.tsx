@@ -1,5 +1,4 @@
 import cloudinary from "cloudinary";
-import { CloudinaryImage } from "../gallery/CloudinaryImage";
 import { SearchResults } from "../gallery/page";
 import FavoritesList from "./favoritesList";
 
