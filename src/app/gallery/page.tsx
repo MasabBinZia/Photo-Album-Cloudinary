@@ -7,22 +7,19 @@ export type SearchResults = {
   tags: string[];
 };
 
-export default async function Gallerypage() {
+export default async function GalleryPage({
+  searchParams: { search },
+}: {
+  searchParams: {
+    search: string;
+  };
+}) {
   const results = (await cloudinary.v2.search
-    .expression("resource_type:image")
+    .expression(`resource_type:image${search ? ` AND tags=${search}` : ""}`)
     .sort_by("created_at", "desc")
     .with_field("tags")
     .max_results(30)
     .execute()) as { resources: SearchResults[] };
-
-  const MAX_COLUMNS = 4;
-
-  function getColums(colIndex: number) {
-    return results.resources.filter(
-      (resource, idx) => idx % MAX_COLUMNS == colIndex
-    );
-  }
-
   return (
     <section>
       <div className="flex flex-col gap-8">
