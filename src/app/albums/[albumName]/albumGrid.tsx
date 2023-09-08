@@ -1,8 +1,8 @@
-import { CloudinaryImage } from "../../components/CloudinaryImage";
 import ImgGrid from "@/components/ImgGrid";
 import { SearchResults } from "./page";
+import { CloudinaryImage } from "@/components/CloudinaryImage";
 
-export default function GalleryGrid({ images }: { images: SearchResults[] }) {
+export default function AlbumGrid({ images }: { images: SearchResults[] }) {
   return (
     <ImgGrid
       images={images}

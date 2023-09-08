@@ -2,9 +2,10 @@
 import { Heart } from "lucide-react";
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { useState, useTransition } from "react";
-import { SearchResults } from "./page";
+import { SearchResults } from "../app/gallery/page";
 import { setAsFavoriteAction } from "./actions";
 import { FullHeart } from "@/components/icons/FullHeart";
+import { ImgMenu } from "./ImgMenu";
 
 export function CloudinaryImage(
   props: {
@@ -42,6 +43,7 @@ export function CloudinaryImage(
           className="absolute top-2 left-2 hover:text-red-600 cursor-pointer"
         />
       )}
+      <ImgMenu img={imgdata} />
     </div>
   );
 }

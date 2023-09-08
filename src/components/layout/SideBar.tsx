@@ -15,7 +15,7 @@ type Btn = {
 
 const BtnData: Btn[] = [
   { id: 1, name: "Gallery", icon: <Image />, href: "/gallery" },
-  { id: 2, name: "Album", icon: <Folder />, href: "/" },
+  { id: 2, name: "Albums", icon: <Folder />, href: "/albums" },
   { id: 3, name: "Favorites", icon: <Heart />, href: "/favorites" },
 ];
 
