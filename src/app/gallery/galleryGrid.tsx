@@ -1,6 +1,6 @@
+import { SearchResults } from "@/types/types";
 import { CloudinaryImage } from "../../components/CloudinaryImage";
 import ImgGrid from "@/components/ImgGrid";
-import { SearchResults } from "./page";
 
 export default function GalleryGrid({ images }: { images: SearchResults[] }) {
   return (

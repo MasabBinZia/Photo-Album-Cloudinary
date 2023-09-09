@@ -9,8 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Folder } from "./page";
 import Link from "next/link";
+import { Folder } from "@/types/types";
 
 export function AlbumCard({ folder }: { folder: Folder }) {
   return (

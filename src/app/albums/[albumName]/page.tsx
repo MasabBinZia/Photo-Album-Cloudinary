@@ -1,10 +1,7 @@
 import cloudinary from "cloudinary";
 import AlbumGrid from "./albumGrid";
+import { SearchResults } from "@/types/types";
 
-export type SearchResults = {
-  public_id: string;
-  tags: string[];
-};
 
 export default async function AlbumPage({
   params: { albumName },

@@ -1,6 +1,6 @@
 import cloudinary from "cloudinary";
-import { SearchResults } from "../gallery/page";
 import FavoritesList from "./favoritesList";
+import { SearchResults } from "@/types/types";
 
 export default async function Favoritespage() {
   const results = (await cloudinary.v2.search

@@ -1,11 +1,7 @@
 import UploadButton from "./uploadButton";
 import cloudinary from "cloudinary";
 import GalleryGrid from "./galleryGrid";
-
-export type SearchResults = {
-  public_id: string;
-  tags: string[];
-};
+import { SearchResults } from "@/types/types";
 
 export default async function GalleryPage({
   searchParams: { search },
