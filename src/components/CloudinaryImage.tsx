@@ -2,10 +2,10 @@
 import { Heart } from "lucide-react";
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { useState, useTransition } from "react";
-import { SearchResults } from "../app/gallery/page";
 import { setAsFavoriteAction } from "./actions";
 import { FullHeart } from "@/components/icons/FullHeart";
 import { ImgMenu } from "./ImgMenu";
+import { SearchResults } from "@/types/types";
 
 export function CloudinaryImage(
   props: {

@@ -1,5 +1,5 @@
 "use server";
-import { SearchResults } from "@/app/gallery/page";
+import { SearchResults } from "@/types/types";
 import cloudinary from "cloudinary";
 
 export async function setAsFavoriteAction(

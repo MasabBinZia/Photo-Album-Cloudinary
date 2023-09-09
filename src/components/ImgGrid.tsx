@@ -1,4 +1,4 @@
-import { SearchResults } from "@/app/gallery/page";
+import { SearchResults } from "@/types/types";
 import { ReactNode } from "react";
 
 const MAX_COLUMNS = 4;

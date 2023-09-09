@@ -8,8 +8,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { AddToAlbumDialog } from "./AddToAlbumDialog";
-import { SearchResults } from "@/app/gallery/page";
 import { useState } from "react";
+import { SearchResults } from "@/types/types";
 
 export function ImgMenu({ img }: { img: SearchResults }) {
   const [open, setOpen] = useState(false);

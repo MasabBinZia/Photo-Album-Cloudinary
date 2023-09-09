@@ -1,5 +1,4 @@
 "use client";
-import { SearchResults } from "@/app/gallery/page";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -15,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { FolderPlus } from "lucide-react";
 import { useState } from "react";
 import { addImgToAlbum } from "./actions";
+import { SearchResults } from "@/types/types";
 
 export function AddToAlbumDialog({
   img,
