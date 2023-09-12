@@ -40,9 +40,9 @@ export default function EditPage({
     <section>
       <div className="flex flex-col gap-8">
         <div className="flex justify-between">
-          <h1 className="text-4xl font-bold">Edit {publicId}</h1>
+          <h1 className="text-2xl font-bold">Edit {publicId}</h1>
         </div>
-        <div className="flex gap-4">
+        <div className="lg:flex lg:gap-4 lg:space-x-0 lg:space-y-0 space-x-4 space-y-4">
           {AIgeneratedBtns.map((btn) => (
             <Button
               key={btn.id}
