@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { Heart } from "lucide-react";
+import { FolderIcon, Heart } from "lucide-react";
 import { Image } from "lucide-react";
-import { Folder } from "lucide-react";
 import Link from "next/link";
-import { NavMenu } from "./NavMenu";
+import cloudinary from "cloudinary";
+import { Folder } from "@/types/types";
+
 
 type Btn = {
   id: number;
@@ -15,11 +16,15 @@ type Btn = {
 
 const BtnData: Btn[] = [
   { id: 1, name: "Gallery", icon: <Image />, href: "/gallery" },
-  { id: 2, name: "Albums", icon: <Folder />, href: "/albums" },
-  { id: 3, name: "Favorites", icon: <Heart />, href: "/favorites" },
+  { id: 2, name: "Favorites", icon: <Heart />, href: "/favorites" },
+  { id: 3, name: "Albums", icon: <FolderIcon />, href: "/albums" },
+
 ];
 
-const SideBar = () => {
+async function SideBar() {
+  const { folders } = (await cloudinary.v2.api.root_folders()) as {
+    folders: Folder[];
+  };
   return (
     <section>
       <div className="pb-12 w-[200px]">
@@ -43,11 +48,23 @@ const SideBar = () => {
                 </Button>
               ))}
             </div>
+            {folders.map((folder) => (
+              <Button
+                variant="ghost"
+                asChild
+                key={folder.name}
+                className="w-full justify-start flex gap-2"
+              >
+                <Link className="pl-8" href={`/albums/${folder.path}`}>
+                  {folder.name}
+                </Link>
+              </Button>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default SideBar;
