@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Photos App is a web application built using Next.js, React, TypeScript, Tailwind CSS, and Shards React UI. It leverages the Cloudinary service for image management and hosting. This Readme provides an overview of the project, its features, and how to set it up locally.
+The Photos App is a web application built using Next.js, React, TypeScript, Tailwind CSS, and Shards React UI. It leverages the Cloudinary service for image management and hosting. This Readme provides an overview of the project, its features, and how to set it up locally..
 
 ### Features
 
